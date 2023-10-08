@@ -54,3 +54,32 @@ NOTE: If you have previously install oh-my-zsh or already have a config files yo
 ----
 $ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ----
+
+.7. add "powerlevel10k/powerlevel10k" to .zshrc
+[source,zsh]
+----
+----
+
+.8. add zsh-autosuggestions
+[source,zsh]
+----
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+----
+
+.9. add zsh-sytax-highlighting
+[source,zsh]
+----
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+----
+
+
+.10. add zsh-autosuggestions zsh-syntax-highlighting web-search to .zshrc plugins
+[source,zsh]
+----
+----
+
+.11. source .zshrc
+[source,zsh]
+----
+$ source .zshrc
+----
