@@ -1,0 +1,9 @@
+= How to setup you Mac Terminal to be beautiful: _*Notes*_
+Dylan J. Hennessy <hennessydylan@outlook.com>
+v1.0, Saturday October 7th, 2023
+:videotitle: 'How to setup your Mac Terminal to be beautiful'
+:videourl: https://www.youtube.com/watch?v=wNQpDWLs4To
+:videocreator: typecraft
+:videoplatform: youtube
+
+== How to Setup your Mac Terminal to be Beautiful

@@ -1,0 +1,56 @@
+= How To Make Your Boring Mac Terminal Better
+Dylan J. Hennessy <hennessydylan@outlook.com>
+:toc: left
+:icons: font
+:experimental:
+:source-highlighter: highlight.js
+:videotitle: {Document Title} 
+:videourl: https://www.youtube.com/watch?v=U-omALWIBos
+:videocreator: Josean Martinez
+:videoplatform: youtube
+
+== commands ran
+
+.1. Install *_Homebrew_*
+[source,bash]
+----
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+----
+
+.2a. Set the *_PATH_* by running each of the following individually
+[source,bash]
+----
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/[username]/.zprofile
+----
+
+.2b. 
+[source,bash]
+eval "$(/opt/homebrew/bin/brew shellenv)"
+---
+
+.3. install *_iterm2_*
+[source,bash]
+----
+$ brew install --cask iterm2
+----
+
+.4. install *_git_*
+[source,bash]
+----
+$ brew install git
+----
+
+.5. Pull down the installation of _oh-my-zsh_
+[source,bash]
+----
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+----
+
+NOTE: If you have previously install oh-my-zsh or already have a config files you may need to delete the files .oh-my-zsh and some other files.
+
+
+.6. install *_powerlevel10k_*
+[source,zsh]
+----
+$ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+----
