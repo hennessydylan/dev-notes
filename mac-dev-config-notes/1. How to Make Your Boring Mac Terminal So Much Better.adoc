@@ -83,3 +83,14 @@ $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTO
 ----
 $ source .zshrc
 ----
+
+.12. Add web-search to plugins in .zshrc
+[source,zsh]
+----
+----
+
+.13. source .zshrc
+[source,zsh]
+----
+$ source .zshrc
+----

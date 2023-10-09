@@ -1,4 +1,4 @@
-= {Document Title} : {Document Subtitle}
+= {doctitle}
 {author} <{authoremail}>
 {revnumber}, {currentdate}
 :sourcedir: 
@@ -11,4 +11,6 @@
 
 == {Document Title} Notes
 
-== AsciiDoc Quick Reference
+=== NeoVim
+
+
