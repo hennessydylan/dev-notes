@@ -133,6 +133,117 @@ include::{sourcedir}/org/asciidoctor/Asciidoctor.java[]
 ----
 ----
 
+=== Asciidoc v non-Asciidoc files
+include directive performs a ssimple file merge sso it works w any text file the context of all included content goes through some form of normalization.
+
+the content of each file is encoded to utf-8.
+
+if the file is recognized as an asciidoc file (w ext .asciidoc .adoc .ad .asc or .txt_ addotoinal normalization & processing is performed.
+
+First all trailing white space & endlines are removed from each line & replaced w a unix line feed 
+
+== Conditionals
+
+. ifdef
+. ifndef
+. ifeval
+
+preprocessor will encounter one of these contitional directives it will evaluate the specific condition. the condition is based on the presence or value of one or more document attributes. if the conditional evaluates to true the lines are included.
+
+== ifdef & ifndef directives
+
+content between the ifdef & the endif directives gets included of the specified attribute is set 
+
+[source]
+----
+ifdef::env-github[]
+This content is for GitHub only.
+endif::[]
+---
+
+[source]
+----
+ifndef::env-github[]
+This content is not shown on GitHub.
+endif::[]
+----
+
+ifdef - evaluates & includes when the attribute is set
+ifndef - evaluates & includes when the attribute is not set
+
+=== ifdef multiple attributes
+
+.include if *any* attribute is set use , 
+```ifdef::backend-html5,backend-docbook5[Only shown if converting to HTML (backend-html5 is set) or DocBook (backend-docbook5 is set).]```
+
+.include if *all* attributes are set
+```ifdef::backend-html5+env-github[Only shown when converting to HTML (backend-html5 is set) on GitHub (env-github is set).]```
+
+=== ifndef w multiple attributes
+
+.unlesss any attribute is set, if one or more of these atrributes are set the content is not included otherwise it is.
+```ifndef::profile-production,env-site[Not shown if profile-production or env-site is set.]```
+
+.Unless all attributes are set, if all are set then the content is not included
+
+
+
+
+:checkedbox: pass:normal[{startsb}&#10004;{endsb}]
+
+
+
+
+{checkedbox} That's done!
+
+
+[%reversed]
+.Parts of an atom
+. Protons
+. Electrons
+. Neutrons
+
+[%interactive]
+* [*] checked
+* [x] also checked
+* [ ] not checked
+* normal list item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -179,3 +290,4 @@ To Define::
 Listing Block Content::: 
 Conditional Preprocessosr Directive:::
 Contiguous Lines::: Lines one after the other 
+Unix Line Feed:::
