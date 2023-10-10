@@ -1,0 +1,45 @@
+= How I use Logseq for Better Productivity & Organizatoin @ Work 
+Dylan J. Hennessy <hennessydylan@outlook.com>
+v1.0, 10-9-2023, doc create
+
+:vidurl: https://www.youtube.com/watch?v=pS5fyFWsZT4
+:ls: Logseq
+;experimental;
+
+
+== Logseq
+
+.The *4* Needs of a Personal Knowledge Management System
+. Storing
+. Retrieving
+. Organizing
+. Connecting
+
+=== What makes logseq so good at these 4 tasks 
+
+
+=== Storing Notes
+
+	A completly offline solution to storing your notes
+
+=== Retreiving Notes
+
+	Logseq has a very fast engine for searching your notes
+
+=== Organizing Notes
+
+	When you have a lot of documents that you create it gets hard to manage all of the files 
+
+	Logseq data is self organizing
+	* notes are stored more like a normal brain
+
+==== {ls} Self Organizing Notes
+
+you are supposed to just type your regular notes into {ls} everyday & it will do the organizing for you
+
+{ls} is an outliner
+an outliner everything is written in bullet points or blocks
+
+.kbd shortcuts
+* kbd:[tab] - indent
+* kbd:[shift-tab] - Un-indent

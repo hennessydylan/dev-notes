@@ -1,0 +1,181 @@
+= AsciiDoc Quick Reference Guide
+Dylan J. Hennessy, Hennyboiszz <hennessydylan@outlook.com,hennybase@gmail.com>
+v1.0, {revdate}
+:toc: auto 
+:toclevels: 1
+:experimental:
+:icons: font
+
+== Callout Numbers
+Callouts add annotationss to lines in codee blocks the first callout number must be placed after the finaly char in a code line. the responding callout by the block is followed by the annotation text. Multiple callout numbers can be used at a single time.
+
+
+[source,javascript]
+----
+function OnUpdate(doc, meta) {
+  var strong = 70;
+  var stmt =
+    SELECT *                  // <.>
+    FROM `beer-samples`       // <.>
+    WHERE abv > $strong;
+  for (var beer of stmt) {    // <.>
+    break;                    // <.>
+  }
+}
+----
+<1> N1QL queries are embedded directly.
+<2> Token escaping is standard N1QL style.
+<3> Stream results using 'for' iterator.
+<4> Cancel streaming query by breaking out.
+
+
+== Code Blocks
+Source Code Examples arre entered into Asciidoc as listing block content, if the `source` style & a language are input then the code is highlighted on the website.
+
+=== Ex 1. 
+
+.Optional title
+[source,java]  
+---- 
+KStreamBuilder builder = new KStreamBuilder();
+
+KStream<String, GenericRecord> source = builder
+        .stream("streaming-topic-beer-sample");
+----
+
+=== Ex 2.
+
+[source,console]
+----
+$ curl GET -u admin:password http://ip.for.destination.cluster:8091/pools/default/buckets
+----
+
+
+
+
+
+
+== Includes
+You can include content from another file into the current asciidoc document by using the _includes directive_.
+
+NOTE: the _include directive_ is a _preproccessor directive_, meaninng that is has no awareness of the surrounding context.
+
+.Usecases
+- partition a large asciidoc docment into smaller files for better organization & to make re-org simpler
+- insert source code from the external files where the code is maintained.
+- populate tables w output, such as csv 
+- create document variants by combining the include directive w _conditional preprocessosr directives_
+- reuse content snippets & boilerplate content such ass terms definitionns disclaimers etc. multipletimes w in the same document
+
+
+.Include Directive Syntax
+[source,asciidoc]
+----
+include::target[leveloffset=offset,lines=ranges,tag(s)=name(s),indent=depth,encoding=encoding,opts=optional]
+----
+
+NOTE: Cannnot use an includes directive if the file starts w a space char
+
+=== Ex 1.
+
+[source,asciidoc]
+----
+= Document Title
+Author Name
+include::attributes-settings.adoc[]
+include::attributes-urls.adoc[]
+:url-example: https://example.org
+
+Document body.
+----
+
+=== Include Proccessing
+- looks likea  block macro but it is not, therefore it is not processed like one, its a preprocessor directive
+- a preprocessor directive is processed when the lines of a document structur. a preprocessor directive merely adds lines to thee reader or takes lines away.
+- The includes directive is a preprocessor directive that always adds lines
+
+NOTE: the include directive is disabled when run in secure mode, in secure mode an includes directive is converted to a link in the output document.
+
+=== Escaping an include directive 
+- if we dont want an include directive to be proccessed we have to escape it using the ```<kbd>\</kbd>``` before the include even if it appears as a verbatim block.
+
+.Escaping include directive
+[source,asciidoc]
+----
+// <.>
+`\include::just-an-ex.ext[]`
+----
+<1>
+
+
+=== Include Directive file location trouble shooting 
+the **path** chosen can be either *relative* or *absolute
+
+.Relative 
+. if the include directive is used in the primary (top-level) document, relative paths are resolved relative to the base directory 
+. if the include directive is used in a file that itself has been included the path is resolved relative to the including file.
+	this begins to get tricky with many included filess
+
+.Absolute
+. if you store adoc file in nested folders @ different levels relative file paths can quickly become awkwarrd & inflexible. A common patturn to help here is to define the paths in the attributes that are defined in the header, then prefix all include paths w a reference to one of these attributes:
+
+.ex
+[source,asciidoc]
+----
+:includedir: _includes
+:sourcedir: ../src/main/java
+
+include::{includedir}/fragment1.adoc[]
+
+[source,java]
+----
+include::{sourcedir}/org/asciidoctor/Asciidoctor.java[]
+----
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Dictionary
+
+To Define::
+Listing Block Content::: 
+Conditional Preprocessosr Directive:::
+Contiguous Lines::: Lines one after the other 

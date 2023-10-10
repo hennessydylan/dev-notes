@@ -1,0 +1,13 @@
+= How I Setup Neovim On My Mac To Make It Amazing : Complete Guide
+Dylan J. Hennessy, Hennyboiszz<hennessydylan@outlook.com,hennybase@gmail.com>
+v1.0, {revdate}
+
+:vidurl: https://www.youtube.com/watch?v=vdn_pKJUda8
+
+== Notes
+
+. Install Neovim via Homebrew
+	```brew install neovim```
+	```nvim --version```
+.
+
