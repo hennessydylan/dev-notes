@@ -1,0 +1,3 @@
+- rank() OVER (ORDER BY {column} {ASC|DESC}) column_name
+	- for each row where the ranking columns hold the same values then those columns will have the same rank value
+	-

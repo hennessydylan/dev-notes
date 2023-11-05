@@ -414,4 +414,4 @@
  :file/name-format :triple-lowbar
  :graph/settings {:journal? true
  :builtin-pages? true
- :excluded-pages? true}}
+ :excluded-pages? false}}

@@ -1,0 +1,51 @@
+= Java Unit Testing Notes
+
+unit test:: a type of test done on software that isolates code down to single units & test the individual functionality of those individual units
+    isolates one single unit 
+
+* in java generally that single unit or peice of code is going to be a class, or even a method inside of that class
+* Junit
+
+== Junit
+
+- to use junit all we have to do is add it as a dependency to in whatever dependency management tool you are using 
+
+.simple calclator java
+[source,java]
+----
+public class SimpleCalculator {
+
+    public int add (int numberA, int numberB){
+        return numberA + numberB;
+    }
+}
+----
+
+.simple calculator test
+[source,java]
+----
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+
+class SimpleCalculatorTest {
+
+    /* this is called a test annotation
+    * in JUnit a unit test is just a method w thee @Test annotation above the declaration of the function.
+    */  
+    @Test
+    void twoPlusTwoShouldEqualFour(){
+        var calculator = new SimpleCalculator();
+        assertEquals(expected:4, calculator.add(numberA:1, NumberB:2));
+    }
+}
+----
+
+=== how to we go about creating tests 
+
+. create a test file in the src/test/java dir in your project
+. 
+
+
+

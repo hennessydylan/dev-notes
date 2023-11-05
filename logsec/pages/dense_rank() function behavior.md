@@ -1,0 +1,9 @@
+- dense_rank() OVER (ORDER BY {column} ASC) col_title
+	- the "dense_rank()" function assigns a rank for every record in a partition as a new column
+	- dense_rank() returns the rank of the current row without gaps
+	-
+- dense_rank() todos:
+	- determine locate
+	-
+	-
+	-
