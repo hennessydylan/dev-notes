@@ -1,0 +1,3 @@
+= Deterministic Procedural Generation
+
+Deterministic Procedural Generation:: makes it easy to test on vasts amounts of data without actually moving large files around across machines. Using the same seed on any machine at any time will consistently produce the same results for all random functions.

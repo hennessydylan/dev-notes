@@ -1,0 +1,25 @@
+= dense_rank() unit tests sql stateements
+
+== Info
+repo:: questdb
+
+
+== table creation statement 
+
+[source,sql]
+----
+"create table trades as " +
+                        "(" +
+                        "select" +
+                        " rnd_int(1,2,3) price," +
+                        " rnd_symbol('AA','BB','CC') symbol," +
+                        " timestamp_sequence(0, 100000000000) ts" +
+                        " from long_sequence(10)" +
+                        ") timestamp(ts) partition by day",
+----
+
+
+== Statements
+
+
+

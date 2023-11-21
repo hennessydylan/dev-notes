@@ -1,0 +1,28 @@
+= Maven Getting Started Guide
+:docs-url: https://maven.apache.org/guides/getting-started/
+
+== Info
+
+Source:: Apache Maveen Project
+Source Url:: http://maven.apache.org/
+
+== How to build questdb 
+
+=== Systeem Info 
+
+Computer:: Macbook Pro 2017
+Processor:: 2.3 gz dual core intel i5
+Graphics:: Intel Iris Plus Graphics 640 1536mb
+Memory:: 8GB 2133 MHz LPDDR3
+
+=== Build Commands
+
+
+
+
+
+.
+[source,console]
+----
+
+----

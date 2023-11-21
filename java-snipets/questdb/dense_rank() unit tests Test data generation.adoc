@@ -1,0 +1,19 @@
+= questdb test data generation
+
+== Include Create Table 
+
+include::includes/create_table_golf_scores.sql[]
+
+== create tables
+
+[source,sql]
+----
+CREATE TABLE golf_scores AS (
+    -- random byte 
+    SELECT 
+        rnd_byte(59,85) as Round Score
+        , 
+    FROM
+        long_sequence(250)
+)
+----

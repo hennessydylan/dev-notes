@@ -1,0 +1,11 @@
+= questdb how to generate test data
+
+blogpost url:: https://questdb.io/blog/2022/03/14/mock-sql-timeseries-data-questdb/#mocking-and-generating-time-series-data
+
+== Running Questdb
+
+[source,console]
+----
+brew install questdb
+brew services start questdb
+----
